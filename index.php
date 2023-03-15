@@ -1,13 +1,12 @@
 <?php 
 
-$difficult= $_GET["difficult"];
-
-echo var_dump($difficult);
-
+// $difficult= $_GET["difficult"];
+session_start();
 
 if($difficult){
     $Password = GeneraPasswordRandom($difficult);
-    echo $Password;
+    $_SESSION["Password"] = $Password;
+    header(__DIR__ . "result_password.php");
 }
 
 
@@ -52,7 +51,7 @@ function GeneraPasswordRandom($password_lenght) {
             <option value="15">NORMAL</option>
             <option value="20">STRONG</option>
           </select>
-        <button class="btn btn-success">Invia il form</button>
+        <button class="btn btn-success">Invia il for</button>
         
       </form>
 
