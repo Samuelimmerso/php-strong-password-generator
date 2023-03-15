@@ -1,6 +1,10 @@
 <?php 
 
+
+//avvio sessione
 session_start();
+
+//salvataggio della variabile password nella sessione nella variabile password
 $Password = $_SESSION["Password"];
 
 ?>
