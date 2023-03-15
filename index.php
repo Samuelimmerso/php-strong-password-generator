@@ -1,12 +1,13 @@
 <?php 
 
-// $difficult= $_GET["difficult"];
+$difficult= $_GET["difficult"];
 session_start();
+
 
 if($difficult){
     $Password = GeneraPasswordRandom($difficult);
     $_SESSION["Password"] = $Password;
-    header(__DIR__ . "result_password.php");
+    header('Location: ./result_password.php');
 }
 
 
